@@ -5,9 +5,9 @@ import base64
 
 def text_to_speech(text):
   audio = gTTS(text, lang='en')
-  #speech_bytes = io.BytesIO()
-  
-  return audio
+  speech_bytes = io.BytesIO()
+  audio.write_to_fp(speech_bytes)
+  return speech_bytes
 
 
 def main():
@@ -20,9 +20,9 @@ def main():
   
   # Convert button
   if st.button("Convert to Speech"):
-    file = text_to_speech(user_input)
+    speech_bytes = text_to_speech(user_input)
     
-    st.audio(file)
+    st.audio(speech_bytes)
     # st.download_button(label="Download Speech",
     #                    data=audio_bytes,
     #                    file_name="speech.mp3",
