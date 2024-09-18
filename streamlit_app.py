@@ -1,6 +1,7 @@
 import streamlit as st
 from gtts import gTTS
 import io
+import base64
 
 def text_to_speech(text):
   audio = gTTS(text, lang='en')
