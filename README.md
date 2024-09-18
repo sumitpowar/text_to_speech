@@ -1,9 +1,12 @@
-# 📦 Text to Speech App
-```
-⬆️ (Replace above with your app's name)
-```
+# 📦 Library Podcast App
 
-Description of the app ...
+This app is created for helping investors to keep updated with the daily news articles related to the Securities Market.
+
+The app extracts text from the news articles, summarizes it and converts it into an Audio.
+
+## Benefit of the App
+
+Investors can listen to an Audio clip (of 10-15 min) during travel to their work place. It will help in developing a new habit of keeping track of Securities Market related news.
 
 ## Demo App
 
