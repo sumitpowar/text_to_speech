@@ -22,7 +22,7 @@ def main():
   if st.button("Convert to Speech"):
     speech_bytes = text_to_speech(user_input)
     
-    st.audio(speech_bytes)
+    st.audio(speech_bytes, format="audio/mp3")
     # st.download_button(label="Download Speech",
     #                    data=audio_bytes,
     #                    file_name="speech.mp3",
