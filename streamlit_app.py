@@ -23,10 +23,10 @@ def main():
     speech_bytes = text_to_speech(user_input)
     
     st.audio(speech_bytes, format="audio/mp3")
-    # st.download_button(label="Download Speech",
-    #                    data=audio_bytes,
-    #                    file_name="speech.mp3",
-    #                    mime="audio/mp3")
+    st.download_button(label="Download Speech",
+                       data=audio_bytes,
+                       file_name="speech.mp3",
+                       mime="audio/mp3")
 
 if __name__ == "__main__":
   main()
