@@ -3,6 +3,7 @@ from gtts import gTTS
 import io
 import base64
 from newspaper import Article
+import pathlib
 
 def podcast(news_url):
   news = Article(news_url)
@@ -16,7 +17,7 @@ def podcast(news_url):
   return news_summary
 
 def text_to_speech(text):
-  audio = gTTS(text, lang='en')
+  audio = gTTS(text, lang='en', slow=False, tld='co.in')
   speech_bytes = io.BytesIO()
   audio.write_to_fp(speech_bytes)
   return speech_bytes
