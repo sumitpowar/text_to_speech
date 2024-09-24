@@ -2,6 +2,18 @@ import streamlit as st
 from gtts import gTTS
 import io
 import base64
+from newspaper import Article
+
+def podcast(news_url):
+  news = Article(news_url)
+  news.download()
+  news.parse()
+  news.nlp()
+
+  news_text = news.text
+  news_summary = news.summary
+  
+  return news_summary
 
 def text_to_speech(text):
   audio = gTTS(text, lang='en')
