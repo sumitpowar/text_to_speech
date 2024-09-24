@@ -4,6 +4,9 @@ import io
 import base64
 from newspaper import Article
 import pathlib
+import pandas as pd
+
+df = pd.read_csv('https://raw.githubusercontent.com/sumitpowar/text_to_speech/refs/heads/master/url_list.csv')
 
 def podcast(news_url):
   news = Article(news_url)
