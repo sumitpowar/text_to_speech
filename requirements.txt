@@ -1,5 +1,5 @@
 streamlit
 pandas
 gTTS
-newspaper
-pathlib
+newspaper3k
+
