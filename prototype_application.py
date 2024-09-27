@@ -3,6 +3,9 @@ from gtts import gTTS
 import io
 from newspaper import Article
 import pandas as pd
+import nltk
+
+nltk.download('punkt_tab')
 
 
 def text_to_speech(text):
